@@ -1,27 +1,45 @@
 {
   "name": "sharepoint-api",
-  "version": "0.1.4",
+  "version": "1.0.5",
   "description": "'SharePoint Online' client for Nodejs",
   "main": "index.js",
   "scripts": {
     "test": "mocha -R spec test"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/kidozen/node-sharepoint-api.git"
-  },
   "keywords": [
     "sharepoint"
   ],
-  "author": "Silvio Massari",
+  "author": {
+    "name": "Kidozen",
+    "email": "development@kidozen.com"
+  },
+  "contributors": [
+    {
+      "name": "Silvio Massari",
+      "email": "silvio@kidozen.com"
+    },
+    {
+      "name": "Hernán Tierno",
+      "email": "hernan.tierno@kidozen.com"
+    }
+  ],
   "license": "MIT",
   "dependencies": {
-    "xpath": "0.0.5",
-    "xmldom": "0.1.16",
-    "node-uuid": "1.4.0",
+    "agentkeepalive": "0.1.5",
     "cookie": "0.1.0",
+    "httpntlm": "https://github.com/kidozen/node-http-ntlm/tarball/master",
+    "kido-connector": "^1.1.1",
     "mem-cache": "0.0.3",
-    "simple-errors": "0.0.4"
+    "node-html-encoder": "0.0.2",
+    "node-uuid": "1.4.0",
+    "querystring": "^0.2.0",
+    "request": "2.44.0",
+    "simple-errors": "0.0.4",
+    "winston": "0.7.2",
+    "wstrust": "0.0.3",
+    "xml2js": "0.4.4",
+    "xmldom": "0.1.16",
+    "xpath": "0.0.5"
   },
   "devDependencies": {
     "mocha": "1.11.0",
@@ -31,5 +49,25 @@
   },
   "directories": {
     "test": "test"
-  }
+  },
+  "gitHead": "bec82699cf2d6ae85ab3d4091028e52480fdceba",
+  "_id": "sharepoint-api@1.0.5",
+  "_shasum": "29ae3343289c913c57c2cfec80046e66dd364d47",
+  "_from": "sharepoint-api@*",
+  "_npmVersion": "1.4.28",
+  "_npmUser": {
+    "name": "kidozen",
+    "email": "development@kidozen.com"
+  },
+  "maintainers": [
+    {
+      "name": "kidozen",
+      "email": "development@kidozen.com"
+    }
+  ],
+  "dist": {
+    "shasum": "29ae3343289c913c57c2cfec80046e66dd364d47",
+    "tarball": "http://registry.npmjs.org/sharepoint-api/-/sharepoint-api-1.0.5.tgz"
+  },
+  "_resolved": "https://registry.npmjs.org/sharepoint-api/-/sharepoint-api-1.0.5.tgz"
 }

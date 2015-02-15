@@ -15,15 +15,16 @@ var Util    = require('./lib/util.js');
  * @api public
  */
 var Sharepoint = function (settings) {
+    "use strict";
 
     // validates arguments
-    if (!settings || typeof(settings)!=="object") throw new Error("'settings' argument must be a valid object instance.");
+    if (!settings || typeof settings !== "object") { throw new Error("'settings' argument must be a valid object instance."); }
 
     // auto reference
-    var self = this;
+    var self = this,
 
     // creates an instance of class that handles all requests
-    var util = new Util(settings);
+        util = new Util(settings);
 
     /*
     * Authenticates a user and returns an authentication user
@@ -33,7 +34,7 @@ var Sharepoint = function (settings) {
     * @param cb {function} required. Callback function.
     * @api public
     */
-    this.authenticate = function(options, cb) {
+    this.authenticate = function (options, cb) {
         util.authenticate(options, cb);
     };
 
@@ -43,7 +44,7 @@ var Sharepoint = function (settings) {
     * @param cb {function} required. Callback function.
     * @api public
     */
-    this.lookupMethod = function(name, cb) {
+    this.lookupMethod = function (name, cb) {
         util.lookupMethod(self, name, cb);
     };
 
@@ -60,7 +61,7 @@ var Sharepoint = function (settings) {
     * @param cb {function} required. Callback function.
     * @api public
     */
-    this.oData = function(options, cb) {
+    this.oData = function (options, cb) {
         util.oData(options, cb);
     };
 
@@ -73,7 +74,7 @@ var Sharepoint = function (settings) {
     * @param cb {function} required. Callback function.
     * @api public
     */
-    this.entitySets = function(options, cb) {
+    this.entitySets = function (options, cb) {
         util.entitySets(options, cb);
     };
 
@@ -88,7 +89,7 @@ var Sharepoint = function (settings) {
     * @param cb {function} required. Callback function.
     * @api public
     */
-    this.get = function(options, cb) {
+    this.get = function (options, cb) {
         util.get(options, cb);
     };
 
@@ -109,7 +110,7 @@ var Sharepoint = function (settings) {
     * @param cb {function} required. Callback function.
     * @api public
     */
-    this.query = function(options, cb) {
+    this.query = function (options, cb) {
         util.query(options, cb);
     };
 
@@ -125,7 +126,7 @@ var Sharepoint = function (settings) {
     * @param cb {function} required. Callback function.
     * @api public
     */
-    this.links = function(options, cb) {
+    this.links = function (options, cb) {
         util.links(options, cb);
     };
 
@@ -139,7 +140,7 @@ var Sharepoint = function (settings) {
     * @param cb {function} required. Callback function.
     * @api public
     */
-    this.count = function(options, cb) {
+    this.count = function (options, cb) {
         util.count(options, cb);
     };
 
@@ -154,7 +155,7 @@ var Sharepoint = function (settings) {
     * @param cb {function} required. Callback function. 
     * @api public
     */
-    this.create = function(options, cb) {
+    this.create = function (options, cb) {
         util.create(options, cb);
     };
 
@@ -171,7 +172,7 @@ var Sharepoint = function (settings) {
     * @param cb {function} required. Callback function.
     * @api public
     */
-    this.replace = function(options, cb) {
+    this.replace = function (options, cb) {
         util.replace(options, cb);
     };
 
@@ -188,7 +189,7 @@ var Sharepoint = function (settings) {
     * @param cb {function} required. Callback function.
     * @api public
     */
-    this.update = function(options, cb) {
+    this.update = function (options, cb) {
         util.update(options, cb);
     };
 
@@ -204,8 +205,16 @@ var Sharepoint = function (settings) {
     * @param cb {function} required. Callback function.
     * @api public
     */
-    this.remove = function(options, cb) {
+    this.remove = function (options, cb) {
         util.remove(options, cb);
+    };
+
+    this.download = function(options, cb) {
+        util.download(options, cb);
+    };
+
+    this.processQuery = function(options, cb) {
+        util.processQuery(options, cb);
     };
 
     // adds helper methods for each entity set.
