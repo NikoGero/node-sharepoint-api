@@ -1,28 +1,16 @@
 {
-  "name": "sharepoint-api",
-  "version": "1.0.5",
-  "description": "'SharePoint Online' client for Nodejs",
+  "name": "sharepoint-api-ipublisher",
+  "version": "1.0.6",
+  "description": "'SharePoint Online' client for Nodejs forked and tweaked for ad-hoc use",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com:darknos/node-sharepoint-api.git"
+  },
   "scripts": {
     "test": "mocha -R spec test"
   },
-  "keywords": [
-    "sharepoint"
-  ],
-  "author": {
-    "name": "Kidozen",
-    "email": "development@kidozen.com"
-  },
-  "contributors": [
-    {
-      "name": "Silvio Massari",
-      "email": "silvio@kidozen.com"
-    },
-    {
-      "name": "Hernán Tierno",
-      "email": "hernan.tierno@kidozen.com"
-    }
-  ],
+  "author": "Kidozen <development@kidozen.com>",
   "license": "MIT",
   "dependencies": {
     "agentkeepalive": "0.1.5",
@@ -50,24 +38,8 @@
   "directories": {
     "test": "test"
   },
-  "gitHead": "bec82699cf2d6ae85ab3d4091028e52480fdceba",
-  "_id": "sharepoint-api@1.0.5",
-  "_shasum": "29ae3343289c913c57c2cfec80046e66dd364d47",
-  "_from": "sharepoint-api@*",
-  "_npmVersion": "1.4.28",
-  "_npmUser": {
-    "name": "kidozen",
-    "email": "development@kidozen.com"
+  "bugs": {
+    "url": "https://github.com/darknos/node-sharepoint-api/issues"
   },
-  "maintainers": [
-    {
-      "name": "kidozen",
-      "email": "development@kidozen.com"
-    }
-  ],
-  "dist": {
-    "shasum": "29ae3343289c913c57c2cfec80046e66dd364d47",
-    "tarball": "http://registry.npmjs.org/sharepoint-api/-/sharepoint-api-1.0.5.tgz"
-  },
-  "_resolved": "https://registry.npmjs.org/sharepoint-api/-/sharepoint-api-1.0.5.tgz"
+  "homepage": "https://github.com/darknos/node-sharepoint-api"
 }
